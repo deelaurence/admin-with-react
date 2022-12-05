@@ -4,7 +4,7 @@ import { Link } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import React from "react";
 import { useEffect, useState } from "react";
-import MyNameField from "./MyNameField";
+// import MyNameField from "./MyNameField";
 export const UserList = () => {
     const [dimensions, setDimensions] = React.useState({
         width: window.innerWidth
@@ -31,7 +31,7 @@ export const UserList = () => {
                 <Datagrid rowClick="edit">
                     <TextField source="id" />
                     <TextField source="name" />
-                    <MyNameField source="name" />
+                    {/* <MyNameField source="name" /> */}
                     <TextField source="zipCode" />
                     <EmailField source="email" />
                 </Datagrid>
