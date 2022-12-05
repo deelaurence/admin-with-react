@@ -3,7 +3,7 @@ import { Admin, Resource, EditGuesser } from "react-admin";
 import jsonServerProvider from "ra-data-json-server";
 import { UserList } from "./user";
 import { TransactionList, TransactionEdit } from './transaction'
-const dataProvider = jsonServerProvider('http://localhost:3000');
+const dataProvider = jsonServerProvider('https://crypto-tech-api.onrender.com');
 import TransactionIcon from "@mui/icons-material/AccountBalanceWallet";
 import UserIcon from "@mui/icons-material/PeopleOutline";
 const App = () => (
