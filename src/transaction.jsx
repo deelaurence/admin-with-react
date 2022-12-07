@@ -38,12 +38,6 @@ export const TransactionList = () => {
         <ReferenceInput source="userId" label="User" reference="users" />,
     ];
 
-    // export const PostList = () => (
-    //     <List filters={postFilters}>
-    //     // ...
-    //     </List>
-    // );
-
     return (
 
         <List filters={postFilters}>
@@ -87,12 +81,14 @@ export const TransactionEdit = () => {
         }
         window.addEventListener('resize', handleResize)
     })
+    let aby = true
     return (
 
         <Edit>
             <SimpleForm>
                 {/* <ReferenceInput source="transaction.status" reference="transactions" /> */}
                 <TextInput source="status" />
+                <TextInput disabled source="status" />
                 <p>Spelling must match with either (pending-failed-approved)</p>
                 <TextInput disabled source="amount" />
                 <TextInput disabled source="owner.name" />

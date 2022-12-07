@@ -1,5 +1,6 @@
 import { useMediaQuery } from "@mui/material";
-import { List, SimpleList, Datagrid, TextField, EmailField } from "react-admin";
+import { List, Edit, SimpleForm, SimpleList, TextInput, Datagrid, TextField, SaveButton, Toolbar, EmailField, NumberInput } from "react-admin";
+
 import { Link } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import React from "react";
@@ -30,12 +31,34 @@ export const UserList = () => {
             ) : (
                 <Datagrid rowClick="edit">
                     {/* <TextField source="id" /> */}
-                    <TextField source="name" />
+                    {/* <TextField source="name" /> */}
                     <MyNameField source="name" />
-                    <TextField source="zipCode" />
-                    <EmailField source="email" />
+                    <TextField source="email" />
+                    <TextField source="address" />
+                    <TextField source="tradeProfit" />
                 </Datagrid>
             )}
         </List>
+    );
+};
+
+export const UserEdit = () => {
+    return (
+
+        <Edit>
+            <SimpleForm>
+                {/* <ReferenceInput source="transaction.status" reference="transactions" /> */}
+                <NumberInput source="tradeProfit" />
+                <NumberInput source="referralBonus" />
+                <NumberInput source="totalEquity" />
+                <TextInput disabled source="pendBalance" />
+                <TextInput disabled source="totalDeposit" />
+                <TextInput disabled source="name" />
+                <TextInput disabled source="email" />
+                <TextInput disabled source="address" />
+            </SimpleForm>
+
+
+        </Edit>
     );
 };

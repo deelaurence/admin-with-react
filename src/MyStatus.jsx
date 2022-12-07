@@ -9,7 +9,7 @@ const MyStatusField = ({ source }) => {
     // console.log(record[source])
     const record = useRecordContext();
     return record ? (
-        <h3 className={`${record[source] == 'approved' ? 'green' : 'yellow'}`}>
+        <h3  className={`${record[source] == 'approved' ? 'green' : 'yellow'}`}>
             {record[source]}
             {record[source] == 'approved' ? < Check sx={{ fontSize: 15, ml: 1 }} /> : < Pending sx={{ fontSize: 15, ml: 1 }} />}
 
