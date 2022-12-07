@@ -8,6 +8,7 @@ import {
     ReferenceField,
     EditButton,
     Edit,
+    SortButton,
     SimpleForm,
     ReferenceInput,
     TextInput,
@@ -16,6 +17,7 @@ import {
 import { Link } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import React from "react";
+import MyStatus from "./MyStatus"
 import { useEffect, useState } from "react";
 export const TransactionList = () => {
     const [dimensions, setDimensions] = React.useState({
@@ -46,17 +48,25 @@ export const TransactionList = () => {
 
         <List filters={postFilters}>
             {isSmall ? (
-                <SimpleList
-                    primaryText={(record) => record.owner.email}
-                    secondaryText={(record) => record.amount}
-                    tertiaryText={(record) => record.status}
-                />
+
+                <>
+                    <MyStatus source='status' />
+                    <SimpleList
+
+                        primaryText={(record) => record.owner.email}
+                        secondaryText={(record) => record.amount}
+                        tertiaryText={(record) => record.status}
+                    />
+                </>
+
             ) : (
                 <Datagrid rowClick="edit">
+
                     <TextField source="owner.name" />
                     <TextField source="amount" />
-                    <TextField source="status" />
-                    <EmailField source="owner.email" />
+                    {/* <TextField source="status" /> */}
+                    <MyStatus source='status' />
+
                 </Datagrid>
             )}
 
