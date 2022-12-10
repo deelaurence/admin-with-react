@@ -19,6 +19,7 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import React from "react";
 import MyStatus from "./MyStatus"
 import { useEffect, useState } from "react";
+import TransactionPagination from './MyPagination';
 export const TransactionList = () => {
     const [dimensions, setDimensions] = React.useState({
         width: window.innerWidth
@@ -40,7 +41,7 @@ export const TransactionList = () => {
 
     return (
 
-        <List filters={postFilters}>
+        <List filters={postFilters} pagination={<TransactionPagination />}>
             {isSmall ? (
 
                 <>
@@ -88,8 +89,8 @@ export const TransactionEdit = () => {
             <SimpleForm>
                 {/* <ReferenceInput source="transaction.status" reference="transactions" /> */}
                 <TextInput source="status" />
-                <TextInput disabled source="status" />
-                <p>Spelling must match with either (pending-failed-approved)</p>
+                {/* <TextInput disabled source="status" /> */}
+                <p className="warning">Spelling must match with either  <span>(pending-failed-approved)</span> </p>
                 <TextInput disabled source="amount" />
                 <TextInput disabled source="owner.name" />
                 <TextInput disabled source="owner.pendBalance" />

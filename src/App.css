@@ -43,16 +43,38 @@
   color: #888;
 }
 
+
 .red {
-  color: red;
+  color: rgba(146, 42, 4, 0.71);
+}
+
+.black {
+  color: black;
 }
 
 .yellow {
-  color: rgb(171, 171, 82);
+  font-style: italic;
+  color: rgba(165, 165, 39, 0.889);
 }
 
+
 .green {
-  color: green;
+  color: rgba(0, 99, 0, 0.782);
+}
+
+.warning {
+  color: rgba(157, 42, 0, 0.741);
+  font-size: 12px;
+  margin-top: -20px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+.warning>span {
+  /* display: block; */
+  text-align: left;
 }
 
 .grey {
