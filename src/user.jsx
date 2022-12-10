@@ -21,7 +21,7 @@ export const UserList = () => {
         window.addEventListener('resize', handleResize)
     })
     return (
-        <List>
+        <List >
             {isSmall ? (
                 <SimpleList
                     primaryText={(record) => record.name}
@@ -29,7 +29,7 @@ export const UserList = () => {
                     tertiaryText={(record) => record.email}
                 />
             ) : (
-                <Datagrid rowClick="edit">
+                <Datagrid bulkActionButtons={false} rowClick="edit">
                     {/* <TextField source="id" /> */}
                     {/* <TextField source="name" /> */}
                     <MyNameField source="name" />
