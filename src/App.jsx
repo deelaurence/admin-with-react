@@ -7,8 +7,8 @@ import red from '@mui/material/colors/grey'
 import green from '@mui/material/colors/green'
 
 import { TransactionList, TransactionEdit } from './transaction'
-// const dataProvider = jsonServerProvider('https://crypto-tech-api.onrender.com');
-const dataProvider = jsonServerProvider('http://localhost:3000');
+const dataProvider = jsonServerProvider('https://crypto-tech-api.onrender.com');
+// const dataProvider = jsonServerProvider('http://localhost:3000');
 import UserIcon from "@mui/icons-material/PeopleOutline";
 import TransactionIcon from "@mui/icons-material/AccountBalanceWallet";
 // import TransactionIcon from "@mui/icons-material/AccountBalanceWallet";
