@@ -58,7 +58,7 @@ export const TransactionList = () => {
                 <Datagrid bulkActionButtons={false} rowClick="edit">
 
                     <TextField source="owner.name" />
-                    <TextField source="amount" />
+                    {/* <TextField source="amount" /> */}
                     {/* <TextField source="status" /> */}
                     <MyStatus source='status' />
 

@@ -1,5 +1,5 @@
 import { Admin, Resource, EditGuesser } from "react-admin";
-
+import authProvider from "./authProvider";
 import jsonServerProvider from "ra-data-json-server";
 import { UserList, UserEdit } from "./user";
 import { defaultTheme } from "react-admin";
@@ -19,7 +19,7 @@ const myTheme = {
   }
 }
 const App = () => (
-  <Admin theme={myTheme} dataProvider={dataProvider} >
+  <Admin theme={myTheme} authProvider={authProvider} dataProvider={dataProvider} >
     <Resource name="users" list={UserList} edit={UserEdit} icon={UserIcon} recordRepresentation="name" />
     <Resource name="transactions" list={TransactionList} icon={TransactionIcon} edit={TransactionEdit} />
   </Admin >

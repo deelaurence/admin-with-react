@@ -29,14 +29,20 @@ export const UserList = () => {
                     tertiaryText={(record) => record.email}
                 />
             ) : (
-                <Datagrid bulkActionButtons={false} rowClick="edit">
-                    {/* <TextField source="id" /> */}
-                    {/* <TextField source="name" /> */}
-                    <MyNameField source="name" />
-                    <TextField source="email" />
-                    <TextField source="address" />
-                    <TextField source="tradeProfit" />
-                </Datagrid>
+                <SimpleList
+                    primaryText={(record) => record.name}
+                    secondaryText={(record) => record.zipCode}
+                    tertiaryText={(record) => record.email}
+                />
+                //     <Datagrid bulkActionButtons={false} rowClick="edit">
+                //         {/* <TextField source="id" /> */}
+                //         {/* <TextField source="name" /> */}
+                //         <MyNameField source="name" />
+                //         <TextField source="email" />
+                //         <TextField source="address" />
+                //         <TextField source="tradeProfit" />
+                //     </Datagrid>
+                // null
             )}
         </List>
     );
