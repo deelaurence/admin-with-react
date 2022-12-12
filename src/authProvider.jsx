@@ -16,7 +16,7 @@ const authProvider = {
                 localStorage.setItem('username', JSON.stringify(auth));
             })
             .catch(() => {
-                throw new Error('Server Error')
+                throw new Error('server error')
             });
     },
     logout: () => {
