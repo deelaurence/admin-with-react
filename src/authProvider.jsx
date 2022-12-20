@@ -1,6 +1,6 @@
 const authProvider = {
     login: ({ username, password }) => {
-        const request = new Request('https://crypto-tech-api.onrender.com/admin/auth/login', {
+        const request = new Request('https://market-crypto-g5nd.onrender.com/admin/auth/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: new Headers({ 'Content-Type': 'application/json' }),
