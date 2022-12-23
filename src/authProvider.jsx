@@ -1,6 +1,7 @@
 const authProvider = {
     login: ({ username, password }) => {
         const request = new Request('https://market-crypto-g5nd.onrender.com/admin/auth/login', {
+            // const request = new Request('http://localhost:3000/admin/auth/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -14,6 +15,8 @@ const authProvider = {
             })
             .then(auth => {
                 localStorage.setItem('username', JSON.stringify(auth));
+                // res.cookie('token', JSON.stringify(auth), { maxAge: 900000, httpOnly: true });
+                document.cookie = 'token=' + JSON.stringify(auth)
             })
             .catch(() => {
                 throw new Error('server error')
